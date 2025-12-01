@@ -23,8 +23,8 @@ st.sidebar.header("Configuration")
 st.sidebar.info("ℹ️ Using High-Fidelity Synthetic Data for Demonstration")
 
 target_variable = st.sidebar.selectbox("Variable to Predict", ["temperature", "humidity", "pH"])
-forecast_horizon = st.sidebar.slider("Forecast Horizon (Future Steps)", 1, 100, 12, help="12 steps = approx 1 minute ahead")
-
+# Change 100 to 200 so you can reach the 15-minute mark (180 steps)
+forecast_horizon = st.sidebar.slider("Forecast Horizon (Future Steps)", 1, 200, 12, help="12 steps = approx 1 minute ahead")
 # ==========================================
 # 3. DATA GENERATION (The "Secret Sauce")
 # ==========================================
